@@ -1,4 +1,4 @@
-package com.android.phasebeam;
+package com.android.gummybeam;
 
 import static android.renderscript.Sampler.Value.NEAREST;
 import static android.renderscript.Sampler.Value.WRAP;
@@ -29,12 +29,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import android.util.Log;
 
-public class PhaseBeamRS {
-    public static String LOG_TAG = "PhaseBeam";
+public class GummyBeamRS {
+    public static String LOG_TAG = "GummyBeam";
     public static final int DOT_COUNT = 28;
     private Resources mRes;
     private RenderScriptGL mRS;
-    private ScriptC_phasebeam mScript;
+    private ScriptC_gummybeam mScript;
     int mHeight;
     int mWidth;
 
@@ -76,7 +76,7 @@ public class PhaseBeamRS {
             smb3.addIndexSetType(Mesh.Primitive.POINT);
             mBeamMesh = smb3.create();
 
-            mScript = new ScriptC_phasebeam(mRS, mRes, R.raw.phasebeam);
+            mScript = new ScriptC_gummybeam(mRS, mRes, R.raw.gummybeam);
             mScript.set_dotMesh(mDotMesh);
             mScript.set_beamMesh(mBeamMesh);
             mScript.bind_dotParticles(mDotParticles);
@@ -164,7 +164,7 @@ public class PhaseBeamRS {
             float green = new Float(values[3]);
             float blue = new Float(values[4]);
             mVertexColors.set_position(i, new Float3(xPos, yPos, 0.0f), false);
-            mVertexColors.set_color(i, new Float4(red, green, blue, 1.0f), false);
+            mVertexColors.set_color(i, new Float4(red, green, blue, 2.0f), false);
         }
         mVertexColors.copyAll();
 
