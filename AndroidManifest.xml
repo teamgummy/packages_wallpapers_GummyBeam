@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="com.android.gummybeam"
+      package="com.android.blueballs"
       android:versionCode="1"
       android:versionName="1.0">
     <uses-sdk android:minSdkVersion="13" />
@@ -9,7 +9,7 @@
 
     <application android:icon="@drawable/icon" android:label="@string/wallpaper_label">
         <service
-            android:name=".GummyBeamWallpaper"
+            android:name=".BlueBallsWallpaper"
             android:label="@string/wallpaper_label"
             android:permission="android.permission.BIND_WALLPAPER">
             <intent-filter>

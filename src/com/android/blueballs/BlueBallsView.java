@@ -1,16 +1,16 @@
-package com.android.gummybeam;
+package com.android.blueballs;
 
 import android.content.Context;
 import android.renderscript.RSSurfaceView;
 import android.renderscript.RenderScriptGL;
 import android.view.SurfaceHolder;
 
-public class GummyBeamView extends RSSurfaceView {
+public class BlueBallsView extends RSSurfaceView {
 
     private RenderScriptGL mRS;
-    private GummyBeamRS mRender;
+    private BlueBallsRS mRender;
 
-    public GummyBeamView(Context context) {
+    public BlueBallsView(Context context) {
         super(context);
         setFocusable(true);
         setFocusableInTouchMode(true);
@@ -24,7 +24,7 @@ public class GummyBeamView extends RSSurfaceView {
             mRS = createRenderScriptGL(sc);
             mRS.setSurface(holder, w, h);
 
-            mRender = new GummyBeamRS();
+            mRender = new BlueBallsRS();
             mRender.init(240, mRS, getResources(), w, h);
         }
 

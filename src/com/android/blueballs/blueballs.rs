@@ -1,6 +1,6 @@
 #pragma version(1)
 
-#pragma rs java_package_name(com.android.gummybeam)
+#pragma rs java_package_name(com.android.blueballs)
 
 #include "rs_graphics.rsh"
 #pragma stateVertex(parent);

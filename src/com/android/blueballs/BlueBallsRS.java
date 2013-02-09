@@ -1,4 +1,4 @@
-package com.android.gummybeam;
+package com.android.blueballs;
 
 import static android.renderscript.Sampler.Value.NEAREST;
 import static android.renderscript.Sampler.Value.WRAP;
@@ -29,12 +29,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import android.util.Log;
 
-public class GummyBeamRS {
-    public static String LOG_TAG = "GummyBeam";
+public class BlueBallsRS {
+    public static String LOG_TAG = "BlueBalls";
     public static final int DOT_COUNT = 28;
     private Resources mRes;
     private RenderScriptGL mRS;
-    private ScriptC_gummybeam mScript;
+    private ScriptC_blueballs mScript;
     int mHeight;
     int mWidth;
 
@@ -76,7 +76,7 @@ public class GummyBeamRS {
             smb3.addIndexSetType(Mesh.Primitive.POINT);
             mBeamMesh = smb3.create();
 
-            mScript = new ScriptC_gummybeam(mRS, mRes, R.raw.gummybeam);
+            mScript = new ScriptC_blueballs(mRS, mRes, R.raw.blueballs);
             mScript.set_dotMesh(mDotMesh);
             mScript.set_beamMesh(mBeamMesh);
             mScript.bind_dotParticles(mDotParticles);
