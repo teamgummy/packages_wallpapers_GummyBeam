@@ -1,4 +1,4 @@
-package com.android.blueballs;
+package com.android.gummybeam;
 
 import android.app.Service;
 import android.graphics.PixelFormat;
@@ -10,7 +10,7 @@ import android.util.DisplayMetrics;
 import android.view.SurfaceHolder;
 import android.view.WindowManager;
 
-public class BlueBallsWallpaper extends WallpaperService {
+public class GummyBeamWallpaper extends WallpaperService {
 
     @Override
     public Engine onCreateEngine() {
@@ -19,7 +19,7 @@ public class BlueBallsWallpaper extends WallpaperService {
 
     private class RenderScriptEngine extends Engine {
         private RenderScriptGL mRenderScript = null;
-        private BlueBallsRS mWallpaperRS = null;
+        private GummyBeamRS mWallpaperRS = null;
         private int mDensityDPI;
 
         @Override
@@ -59,7 +59,7 @@ public class BlueBallsWallpaper extends WallpaperService {
             super.onSurfaceCreated(surfaceHolder);
 
             RenderScriptGL.SurfaceConfig sc = new RenderScriptGL.SurfaceConfig();
-            mRenderScript = new RenderScriptGL(BlueBallsWallpaper.this, sc);
+            mRenderScript = new RenderScriptGL(GummyBeamWallpaper.this, sc);
             mRenderScript.setPriority(RenderScript.Priority.NORMAL);
         }
 
@@ -79,7 +79,7 @@ public class BlueBallsWallpaper extends WallpaperService {
             }
 
             if (mWallpaperRS == null) {
-                mWallpaperRS = new BlueBallsRS();
+                mWallpaperRS = new GummyBeamRS();
                 mWallpaperRS.init(mDensityDPI, mRenderScript, getResources(), width, height);
                 mWallpaperRS.start();
             }

@@ -1,16 +1,16 @@
-package com.android.blueballs;
+package com.android.gummybeam;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-public class BlueBalls extends Activity {
+public class GummyBeam extends Activity {
 
-    private BlueBallsView mView;
+    private GummyBeamView mView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mView = new BlueBallsView(this);
+        mView = new GummyBeamView(this);
         setContentView(mView);
     }
 }
